@@ -1,0 +1,45 @@
+-- Crea la tabla Grados
+CREATE TABLE Grados (
+  Grado INT NOT NULL,
+  NivelEducativo VARCHAR (200) NOT NULL,
+  Código_Puerta INT NOT NULL,
+  PRIMARY KEY (Grado)
+);
+
+-- Crea la tabla Materias
+CREATE TABLE Materias (
+  ID_Materia INT NOT NULL,
+  Materia VARCHAR (200) NOT NULL,
+  PRIMARY KEY (ID_Materia)
+);
+
+-- Crea la tabla Estudiantes
+CREATE TABLE Alumnos (
+  ID_Matrícula INT NOT NULL,
+  NúmeroDocumento INT NOT NULL,
+  Nombre VARCHAR (200) NOT NULL,
+  Grado INT NOT NULL,
+  PRIMARY KEY (ID_Matrícula),
+  FOREIGN KEY (Grado) REFERENCES Grados (Grado)
+);
+
+-- Crea la tabla Profesores
+CREATE TABLE Profesores (
+  ID_Profesor INT NOT NULL,
+  ID_Materia INT NOT NULL,
+  NúmeroDocumento INT NOT NULL,
+  Nombre VARCHAR (200) NOT NULL,
+  Asignatura VARCHAR (200) NOT NULL,
+  PRIMARY KEY (ID_Profesor),
+  FOREIGN KEY (ID_Materia) REFERENCES Materias (ID_Materia)
+);
+
+-- Crea la tabla Imparte1
+CREATE TABLE  Imparte1 (
+  ID_Imparte INT NOT NULL,
+  ID_Profesor INT NOT NULL,
+  Grado INT NOT NULL,
+  PRIMARY KEY (ID_Imparte),
+  FOREIGN KEY (ID_Profesor) REFERENCES Profesores (ID_Profesor),
+  FOREIGN KEY (Grado) REFERENCES Grados (Grado)
+);

@@ -1,0 +1,65 @@
+INSERT INTO alumnos (ID_Matrícula, NúmeroDocumento, Nombre, Grado)
+VALUES (0001, 1037620017, 'Juan Hernández', 8),
+(0002, 1037620018, 'Ana Gómez', 9),
+(0003, 1037620019, 'Liliana Sierra', 3),
+(0004, 1037620020, 'Camila Bedoya', 4),
+(0005, 1037620021, 'Miguel Arias', 1),
+(0006, 1037620022, 'Nikol Tamayo', 6),
+(0007, 1037620023, 'Juan Lopera', 8),
+(0008, 1037620024, 'Fanery Correa', 7),
+(0009, 1037620025, 'Jose Rodríguez', 9),
+(0010, 1037620026, 'Diana Restrepo', 10)
+;
+
+INSERT INTO grados (grado, NivelEducativo, Código_Puerta)
+VALUES (1, 'Primaria', 001),
+(2, 'Primaria', 002),
+(3, 'Primaria', 003),
+(4, 'Primaria', 004),
+(5, 'Primaria', 005),
+(6, 'Bachillerato', 006),
+(7, 'Bachillerato', 007),
+(8, 'Bachillerato', 008),
+(9, 'Bachillerato', 009),
+(10, 'Bachillerato', 010)
+;
+
+INSERT INTO imparte1 (ID_Imparte, ID_Profesor, Grado)
+VALUES (100, 43724560, 1),
+(101, 1037620019, 2),
+(102, 70568874, 3),
+(103, 43724568, 4),
+(104, 1037620071, 5),
+(105, 70568877, 6),
+(106, 43724566, 7),
+(107, 1037620083, 8),
+(108, 70568972, 9),
+(109, 43724563, 10)
+;
+
+INSERT INTO materias (ID_Materia, Materia)
+VALUES (500, 'Biología'),
+(501, 'Matemáticas'),
+(502, 'FinanzasPersonales'),
+(503, 'Inglés'),
+(504, 'CompetenciasCiudadanas'),
+(505, 'Física'),
+(506, 'Química'),
+(507, 'Cálculo'),
+(508, 'Estadística'),
+(509, 'EdFísica')
+;
+
+INSERT INTO profesores (ID_Profesor, ID_Materia, NúmeroDocumento, Nombre, Asignatura)
+VALUES (06635, 509, 1037655000, 'Fredy Hincapié', 'EdFísica'),
+(06605, 508, 1037655000, 'Marta gallego', 'Estadística'),
+(06615, 507, 1037655000, 'Carlos Atehortúa', 'Cálculo'),
+(06625, 506, 1037655000, 'Jhon Pulgarín', 'Química'),
+(06645, 505, 1037655000, 'Luis Vélez', 'Física'),
+(06655, 504, 1037655000, 'Sandra Gallego', 'CompetenciasCiudadanas'),
+(06665, 503, 1037655000, 'Linda Caicedo', 'Inglés'),
+(06675, 502, 1037655000, 'Lionel Messi', 'FinanzasPersonales'),
+(06685, 501, 1037655000, 'Naruto Uzumaki', 'Matemáticas'),
+(06695, 500, 1037655000, 'Ronaldinho Gaucho', 'Biología')
+;
+
